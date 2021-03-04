@@ -20,12 +20,12 @@
                         </div>
                         <div class="col-2">
                             
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btnSearch">
                                 Search
                             </button>
                         </div>
                         <div class="col-4">
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btnLocation">
                                 Current Location
                             </button>
                         </div>
@@ -33,27 +33,41 @@
                 </form>
             <div class="row">
                 <div class="col-6">
+                    <div class="row px-2">
                     <h1>Prague</h1>
                     <h2>Clear Sky</h2>
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloudy">
-                    <span>17</span>
-                    °C | <a href="#">°F </a>
-
+                    </div>
+                    <div class="row">
+                        <div class="col p-0">
+                        <img src="src/weather-icons/sunny.svg" alt="Partly Cloudy">
+                        </div>
+                    <div class="col p-0 d-flex align-items-start">
+                        <span class="temperature ">20
+                        </span>
+                        <span class="units"> 
+                            <a href="#">°C</a> | <a href="#">°F</a>
+                        </span>
+                    </div>
+                    </div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 d-flex align-items-end">
+                
                         <ul class="weather-information">
                             <li>Updated: Sunday 21:00</li>
                             <li>Precipitation: 2%</li>
                             <li>Humidity: 80%</li>
                             <li>Wind: 10km/ hour</li>
                         </ul>
+                        
                 </div>
             </div>
+            <hr class="new1">
             <div class="row">
+                <div class="d-flex justify-content-center">
                 <div class="col">
                     <ul class="weekDay">
                         <li>Monday</li>
-                        <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloudy">
+                        <li><img src="src/weather-icons/sunny.svg" alt="Sunny">
                         </li>
                         <li>
                             <span> 6</span>° | <span> 2</span>°
@@ -63,7 +77,7 @@
                 <div class="col">
                     <ul class="weekDay">
                         <li>Tuesday</li>
-                        <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloudy">
+                        <li><img src="src/weather-icons/sunny.svg" alt="Partly Cloudy">
                         </li>
                         <li>
                             <span> 10</span>° | <span> 4</span>°
@@ -74,7 +88,7 @@
                 <div class="col">
                         <ul class="weekDay">
                             <li>Wednesday</li>
-                            <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloudy">
+                            <li><img src="src/weather-icons/sunny.svg" alt="Partly Cloudy">
                             </li>
                             <li>
                                 <span> 6</span>° | <span> 2</span>°
@@ -84,7 +98,7 @@
                 <div class="col">
                     <ul class="weekDay">
                         <li>Thursday</li>
-                        <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloudy">
+                        <li><img src="src/weather-icons/sunny.svg" alt="Partly Cloudy">
                         </li>
                         <li>
                             <span> 6</span>° | <span> 2</span>°
@@ -94,12 +108,13 @@
                 <div class="col">
                     <ul class="weekDay">
                         <li>Friday</li>
-                        <li><img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Cloudy">
+                        <li><img src="src/weather-icons/sunny.svg" alt="Partly Cloudy">
                         </li>
                         <li>
                             <span> 6</span>° | <span> 2</span>°
                         </li>
                     </ul>
+                </div>
                 </div>
             </div>
             </div>

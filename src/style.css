@@ -2,6 +2,42 @@
   color: rgb(56, 56, 56);
 }
 
+.btnSearch {
+  background-color: #9537fc;
+  color: rgb(255, 255, 255);
+  border: 1px solid #9537fc;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.btnLocation {
+  background-color: #24acd6;
+  color: rgb(255, 255, 255);
+  border: 1px solid #24acd6;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+.temperature {
+  color: black;
+  font-size: 60px;
+  font-weight: 400;
+}
+.units {
+  padding-left: 5px;
+  position: relative;
+  top: 15px;
+}
+
+.units a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.new1 {
+  border: 1px solid #9537fc;
+  opacity: 1;
+}
+
 .weather-app {
   border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
@@ -17,9 +53,14 @@
   padding: 0px;
   margin: 10px 0px;
 }
+
 li {
   list-style: none;
   line-height: 2;
+}
+
+.weekDay li {
+  text-align: center;
 }
 
 .weekDay {
