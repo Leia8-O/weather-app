@@ -2,21 +2,36 @@
   color: rgb(56, 56, 56);
 }
 
-.btnSearch {
-  background-color: #9537fc;
+.btnSearch,
+.btnLocation {
   color: rgb(255, 255, 255);
-  border: 1px solid #9537fc;
   border-radius: 5px;
   padding: 5px 15px;
+  box-shadow: 2px 2px 4px #cacaca;
+}
+
+.btnSearch {
+  background-color: #9537fc;
+  border: 1px solid #9537fc;
+}
+
+.btnSearch:hover {
+  background-color: #ffffff;
+  color: #9537fc;
+  border: 1px solid #9537fc;
 }
 
 .btnLocation {
   background-color: #24acd6;
-  color: rgb(255, 255, 255);
   border: 1px solid #24acd6;
-  border-radius: 5px;
-  padding: 5px 15px;
 }
+
+.btnLocation:hover {
+  background-color: #ffffff;
+  color: #24acd6;
+  border: 1px solid #24acd6;
+}
+
 .temperature {
   color: black;
   font-size: 60px;
@@ -33,17 +48,20 @@
   color: #000000;
 }
 
-.new1 {
+.horizontal-line {
   border: 1px solid #9537fc;
   opacity: 1;
 }
-
+.wrapper {
+  max-width: 600px;
+  margin: 20px auto;
+}
 .weather-app {
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid #9537fc;
   border-radius: 10px;
   padding: 15px;
-  margin: 20px auto;
-  max-width: 600px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 4px #cacaca;
 }
 
 .search-form {
@@ -66,4 +84,15 @@ li {
 .weekDay {
   padding: 0px;
   margin: 0px;
+}
+
+.githubLink {
+  color: #24acd6;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.githubLink:hover {
+  color: #9537fc;
+  text-decoration: underline;
 }
