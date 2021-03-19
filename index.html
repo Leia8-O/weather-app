@@ -12,18 +12,19 @@
     
     <link rel="stylesheet" href="src/style.css">
 </head>
-<body>   
+<body>
 
-        <div class="container">
-            <div class="wrapper">
+    <div class="container">
+        <div class="wrapper">
             <div class="weather-app">
                 <form id="search-form">
                     <div class="row">
                         <div class="col-6">
-                            <input type="search" class="form-control" id="search-input" placeholder="Search a city ..." autocomplete="off">
+                            <input type="search" class="form-control" id="search-input" placeholder="Search a city ..."
+                                autocomplete="off">
                         </div>
                         <div class="col-2">
-                            
+
                             <button type="button" class="btnSearch">
                                 Search
                             </button>
@@ -35,31 +36,35 @@
                         </div>
                     </div>
                 </form>
-            <div class="row">
-                <div class="col-6">
-                    <div class="row px-2">
-                    <h1 id="city"></h1>
-                    <h2 id="description"></h2>
+            
+                <div class="row">
+                    <div class="row px-3">
+                        <h1 id="city"></h1>
+                        <h2 id="description"></h2>
                     </div>
-                    <div class="row">
-                        <div class="col p-0">
-                        <img src="#" id="main-icon">
+                <div class="row">
+                    <div class="col-6">
+                    
+                        <div class="row px-1">
+                            <div class="col p-2">
+                                <img src="#" id="main-icon">
+                            </div>
+                            <div class="col p-0 d-flex align-items-start">
+                                <span class="temperature" id="temperature">
+                                </span>
+                                <span class="units">
+                                    <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a>
+                                </span>
+
+                            </div>
                         </div>
-                    <div class="col p-0 d-flex align-items-start">
-                        <span class="temperature" id="temperature">
-                        </span>
-                        <span class="units"> 
-                            <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a>
-                        </span>
-                        
                     </div>
-                    </div>
-                </div>
-                <div class="col-6 d-flex align-items-end">
                 
+                    <div class="col-6 d-flex align-items-end">
+
                         <ul class="weather-information">
                             <li>Updated: <span id="date"></span></li>
-                            <li>Feels like: 
+                            <li>Feels like:
                                 <span id="feels-like">
                                 </span>
                                 °C
@@ -67,70 +72,22 @@
                             <li>Humidity: <span id="humidity"></span> %</li>
                             <li>Wind: <span id="wind"></span> km/hour</li>
                         </ul>
-                        
-                </div>
-            </div>
-            <hr class="horizontal-line">
-            <div class="row">
-                <div class="d-flex justify-content-center">
-                <div class="col">
-                    <ul class="weekDay">
-                        <li><strong>Monday</strong></li>
-                        <li><img src="#" alt="Sunny">
-                        </li>
-                        <li>
-                            <span> 6</span>° | <span> 2</span>°
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <ul class="weekDay">
-                        <li><strong>Tuesday</strong></li>
-                        <li><img src="#" alt="Partly Cloudy">
-                        </li>
-                        <li>
-                            <span> 10</span>° | <span> 4</span>°
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="col">
-                        <ul class="weekDay">
-                            <li><strong>Wednesday</strong></li>
-                            <li><img src="#" alt="Partly Cloudy">
-                            </li>
-                            <li>
-                                <span> 6</span>° | <span> 2</span>°
-                            </li>
-                        </ul>
+                    </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <ul class="weekDay">
-                        <li><strong>Thursday</strong></li>
-                        <li><img src="#" alt="Partly Cloudy">
-                        </li>
-                        <li>
-                            <span> 6</span>° | <span> 2</span>°
-                        </li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <ul class="weekDay">
-                        <li><strong>Friday</strong></li>
-                        <li><img src="#" alt="Partly Cloudy">
-                        </li>
-                        <li>
-                            <span> 6</span>° | <span> 2</span>°
-                        </li>
-                    </ul>
-                </div>
-                </div>
+                <hr class="horizontal-line">
+                <div class="row" id="forecast"></div>
             </div>
-            </div>
-            <a href="https://github.com/Leia8-O/weather-app" target="_blank" class="githubLink">Open Source Code</a> by Michaela Szilvasova
-        </div>
+            <small>
+                <a href="https://github.com/Leia8-O/weather-app" target="_blank" class="githubLink">Open Source Code</a> by
+                Michaela
+                Szilvasova
+            </small>
         </div>
 
         <script src="src/script.js"></script>
-    </body>
-    </html>
+    </div>
+</body>
+
+</html>

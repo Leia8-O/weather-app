@@ -5,8 +5,8 @@
 .btnSearch,
 .btnLocation {
   color: rgb(255, 255, 255);
-  border-radius: 5px;
   padding: 5px 15px;
+  border-radius: 5px;
   box-shadow: 2px 2px 4px #cacaca;
 }
 
@@ -47,14 +47,27 @@ h2 {
   top: 15px;
 }
 
-.units a {
+a {
   text-decoration: none;
-  color: #000000;
+  color: #24acd6;
+}
+
+#celsius {
+  color: #9537fc;
+}
+
+#fahrenheit {
+  color: #24acd6;
 }
 
 .horizontal-line {
   border: 1px solid #9537fc;
   opacity: 1;
+}
+
+#forecast ul {
+  padding: 0px;
+  text-align: center;
 }
 .wrapper {
   max-width: 600px;
@@ -73,21 +86,12 @@ h2 {
 }
 .weather-information {
   padding: 0px;
-  margin: 10px 0px;
+  margin: 0px 0px 0px 20px;
 }
 
 li {
   list-style: none;
   line-height: 2;
-}
-
-.weekDay li {
-  text-align: center;
-}
-
-.weekDay {
-  padding: 0px;
-  margin: 0px;
 }
 
 .githubLink {

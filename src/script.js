@@ -1,15 +1,5 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
 
   let days = [
     "Sunday",
@@ -22,8 +12,20 @@ function formatDate(timestamp) {
   ];
 
   let day = days[date.getDay()];
+  return `${day} ${formatHours(timestamp)}`;
+}
 
-  return `${day} ${hours}:${minutes}`;
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
@@ -53,6 +55,39 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+
+                <div class="col">
+                    <ul>
+                        <li>
+                        <strong>${formatHours(forecast.dt * 1000)}
+                        </strong>
+                        </li>
+                        <li>
+                            <img src="https://serene-hopper-1e58e9.netlify.app/src/weather-icons/${
+                              forecast.weather[0].icon
+                            }.svg" />
+                        </li>
+                        <li>
+                            <span><strong>
+                            ${Math.round(forecast.main.temp_max)}°
+                            </strong></span>|<span>
+                             ${Math.round(forecast.main.temp_min)}°
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+      `;
+  }
+}
+
 function search(city) {
   let apiKey = "e9764dac155c9d08b2bf4e061ebe9840";
   let units = "metric";
@@ -60,6 +95,9 @@ function search(city) {
   let apiUrl = `${apiEndPoint}q=${city}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSumbit(event) {
