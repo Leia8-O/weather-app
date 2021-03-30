@@ -120,6 +120,8 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+let btnSearch = document.querySelector("#search-button");
+btnSearch.addEventListener("click", handleSumbit);
 
 let btnLocation = document.querySelector("#location-button");
 btnLocation.addEventListener("click", getCurrentLocation);
